@@ -13,6 +13,7 @@ A retro-themed guide to cocktail recipe & nutritional information. A user can su
 - SO THAT I know more about about the cocktail & how it aligns with my dietary requirements.
 
 ### Sketch of the design:
+![mockup](https://raw.githubusercontent.com/Eelektrick/project-1/master/assets/mockup-1.png)
 
 
 ### APIs to be used:
