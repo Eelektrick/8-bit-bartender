@@ -5,7 +5,7 @@
 8-bit Bartender
 
 ### Project Description:
-A retro-themed guide to cocktail recipe & nutritional information. A user can submit a cocktail, and the ingredients & nutritional information will be provided.
+A retro-themed guide to cocktail recipes & nutritional information. A user can submit a cocktail, and the ingredients & nutritional information will be provided.
 
 ### User Story:
 - AS A user & cocktail connoisseur
