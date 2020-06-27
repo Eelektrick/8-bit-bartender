@@ -1,35 +1,48 @@
 # 8-bit Bartender
 
 
-Project Title: 8-bit Bartender
+### Project Title: 8-bit Bartender
 
-Project Description: A retro-themed guide to cocktail recipe & nutritional information. A user can submit a cocktail, and the ingredients & nutritional information will be provided.
+### Project Description:
+A retro-themed guide to cocktail recipe & nutritional information. A user can submit a cocktail, and the ingredients & nutritional information will be provided.
 
-User Story:
+### User Story:
 - AS A user & cocktail connoisseur
 - I WANT ingredients & nutritional info about the cocktail that I'm searching
 - SO THAT I know more about about the cocktail & how it aligns with my dietary requirements.
 
+### Sketch of the design:
+
+
+### APIs to be used:
+
 Server-Side APIs:
 
-Use Cocktail DB API to get cocktail ingredients
+Cocktail DB API to get cocktail ingredients
 - https://rapidapi.com/theapiguy/api/the-cocktail-db?endpoint=apiendpoint_49b98879-938e-4479-b0da-718468fb87bc
 
-Use Nurition API to get nutritional info
+Nurition API to get nutritional info
 - https://rapidapi.com/spoonacular/api/recipe-food-nutrition
-
-
-CSS Framework: NES.css
-- https://nostalgic-css.github.io/NES.css/
 
 
 3rd-party API:
 
+Moment.js to display retro clock:
+- https://momentjs.com/
+
+
+### CSS Frameworks: 
+
+Materialize
+- https://materializecss.com/
+
+NES.css
+- https://nostalgic-css.github.io/NES.css/
 
 
 Future functionality:
 
-Use Wikipedia to pull relevant facts/info about cocktail
+Wikipedia to pull relevant facts/info about cocktail
 - https://www.mediawiki.org/wiki/API:Main_page
 
 
