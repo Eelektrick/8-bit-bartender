@@ -36,7 +36,7 @@ A retro-themed guide to cocktail recipe & nutritional information. A user can su
 [NES.css](https://nostalgic-css.github.io/NES.css/)
 
 
-#### Future functionality:
+### Future functionality:
 
 [Wikipedia to pull relevant facts/info about cocktail](https://www.mediawiki.org/wiki/API:Main_page)
 
