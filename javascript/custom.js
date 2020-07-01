@@ -24,6 +24,7 @@ $(document).ready(function(){
         $('#second').css("transform", "rotate(" + second + "deg)");
     }
 
+    //click function for finding cocktail being searched
     $("#find-cocktail").on("click", function(event) {
         event.preventDefault();
         var cocktail = $("#cocktail-input").val();
@@ -35,6 +36,35 @@ $(document).ready(function(){
           $("#cocktail-info").text(JSON.stringify(response));
         });
     });
+
+    //click nutrition button will show nutrition from nutrition API
+    $("#find-nutrition").on("click", function(event){
+        event.preventDefault();
+
+        var settings = {
+            "async": true,
+            "crossDomain": true,
+            "url": "https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/visualizeIngredients",
+            "method": "POST",
+            "headers": {
+            "x-rapidapi-host": "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com",
+            "x-rapidapi-key": "0db78244ecmsh4626ddd67f9751fp1f1254jsn223786f7ea47",
+            "accept": "text/html",
+            "content-type": "application/x-www-form-urlencoded"
+            },
+            //Do not know if we need this to work without testing but putting it here if needed
+            // "data": {
+            //     "measure": "metric",
+            //     "view": "grid",
+            //     "ingredientList": "3 oz flour",
+            //     "servings": "2"
+            // }
+        }
+
+        $.ajax(settings).then(function(response){
+            $("#nutrition-info").text(JSON.stringify(response));
+        });
+    }); 
 
     /*
     function updateSnippets () {
