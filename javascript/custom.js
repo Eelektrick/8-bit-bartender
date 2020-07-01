@@ -24,6 +24,18 @@ $(document).ready(function(){
         $('#second').css("transform", "rotate(" + second + "deg)");
     }
 
+    $("#find-cocktail").on("click", function(event) {
+        event.preventDefault();
+        var cocktail = $("#cocktail-input").val();
+        var queryURL = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=" + cocktail;
+        $.ajax({
+          url: queryURL,
+          method: "GET"
+        }).then(function(response) {
+          $("#cocktail-info").text(JSON.stringify(response));
+        });
+    });
+
     /*
     function updateSnippets () {
         var i;
