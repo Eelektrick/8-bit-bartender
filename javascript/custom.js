@@ -9,7 +9,7 @@ $(document).ready(function(){
 
     function timedUpdate () {
         updateClock();
-        updateSnippets();
+        //updateSnippets();
         setTimeout(timedUpdate, 1000);
     }
 
@@ -24,7 +24,7 @@ $(document).ready(function(){
         $('#second').css("transform", "rotate(" + second + "deg)");
     }
 
-
+    /*
     function updateSnippets () {
         var i;
 
@@ -34,6 +34,7 @@ $(document).ready(function(){
             snippets[i].update();
         }
     }
+    */
 
 // Code saved for frontend to make circle
 /*
