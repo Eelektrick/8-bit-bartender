@@ -56,6 +56,11 @@ $(document).ready(function(){
         });
     }); 
 
+    document.addEventListener('DOMContentLoaded', function(i) {
+        var elems = document.querySelectorAll('.collapsible');
+        var instances = M.Collapsible.init(elems, options);
+      });
+
     /*
     function updateSnippets () {
         var i;
@@ -81,12 +86,7 @@ $(document).ready(function(){
 </div>
 */
 
-});  
-
-
-</div>
-*/
-
+}); 
 
 // CocktailDB
 
@@ -173,5 +173,4 @@ $.ajax(settings).done(function (response) {
     //   console.log(response);
     //     //$("#cocktail-info").text(JSON.stringify(response));
     // })
-});
 
