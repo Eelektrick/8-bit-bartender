@@ -78,15 +78,53 @@ $(document).ready(function(){
     }
     */
 
-// Code saved for frontend to make circle
-/*
-<div class="hero-circle">
-    <div class="hero-face">
-        <div id="hour" class="hero-hour" style="transform: rotate(313.3deg);"></div>
-        <div id="minute" class="hero-minute" style="transform: rotate(159.6deg);"></div>
-        <div id="second" class="hero-second" style="transform: rotate(216deg);"></div>
+    // Code saved for frontend to make circle
+    /*
+    <div class="hero-circle">
+        <div class="hero-face">
+            <div id="hour" class="hero-hour" style="transform: rotate(313.3deg);"></div>
+            <div id="minute" class="hero-minute" style="transform: rotate(159.6deg);"></div>
+            <div id="second" class="hero-second" style="transform: rotate(216deg);"></div>
+        </div>
     </div>
+<<<<<<< HEAD
 </div>
 */
 
 });  
+=======
+    */
+
+
+    // CocktailDB
+
+    var settings = {
+        "async": true,
+        "crossDomain": true,
+        "url": "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=bloody_mary",
+        "method": "GET",
+        "headers": {
+            "x-rapidapi-host": "the-cocktail-db.p.rapidapi.com",
+            "x-rapidapi-key": "4aae919d49msh403d2dc296b2570p119298jsncca5c46f499a"
+        }
+    }
+
+    $.ajax(settings).done(function (response) {
+        console.log(response);
+    });
+
+    $("#find-cocktail").on("click", function(event) {
+        event.preventDefault();
+        var cocktail = $("#cocktail-input").val();
+        var queryURL = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=" + cocktail;
+        
+        $.ajax({
+        url: queryURL,
+        method: "GET"
+        }).then(function(response) {
+        $("#cocktail-info").text(JSON.stringify(response));
+        });
+    });
+
+});
+>>>>>>> f7385ce670a613a2806138b95de81c61336802e1
