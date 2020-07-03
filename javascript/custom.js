@@ -56,6 +56,8 @@ $(document).ready(function(){
         });
     }); 
 
+
+
     /*
     function updateSnippets () {
         var i;
@@ -80,8 +82,6 @@ $(document).ready(function(){
 
 </div>
 */
-
-});  
 
 
 
@@ -171,5 +171,8 @@ $.ajax(settings).done(function (response) {
     // }).then(function(response) {
     //   console.log(response);
     //     //$("#cocktail-info").text(JSON.stringify(response));
-    // })
+    // }) 
 
+
+
+    
