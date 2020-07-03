@@ -7,7 +7,7 @@
     <!-- Materialize CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <!-- NES CSS -->
-    <link href="https://unpkg.com/nes.css@2.3.0/css/nes.min.css" rel="stylesheet" />    <!-- Press Start 2P Font -->
+    <link href="https://unpkg.com/nes.css@2.3.0/css/nes.min.css" rel="stylesheet" />  
     <!-- Press Start 2P Font -->
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <!-- Local CSS -->
@@ -15,21 +15,24 @@
 </head>
 <body>
     <!-- GIF -->
-    <iframe src="https://giphy.com/embed/Uqe0DHSR1XyWkfIojk" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p>
+    <div id="background">
+        <img src="/assets/tapper-screenshot-bonus-rootbeer.jpg" alt="Bartender background image">
+    </div>
 
     <!-- Search Input -->
     <div class="nes-field is-inline">
         <label for="searchBar">What would you like to drink?</label>
         <input type="text" id="searchBar" class="nes-input">
     </div>
+    
     <!-- Search Button -->
     <button type="button" class="nes-btn is-primary">Search</button>
 
     <!-- Accordion Element -->
 <div class="collapsible">
-      <div button type="button" class="nes-btn is-warning"></button></i>Ingredients</div>
+      <div button type="button" class="nes-btn is-warning" ></button></i>Ingredients</div>
       <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-        <br>
+        
       <div button type="button" class="nes-btn is-warning"></button></i>Nutrition</div>
       <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
 </div>
