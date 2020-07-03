@@ -62,6 +62,9 @@ $(document).ready(function(){
         }
 
         $.ajax(settings).then(function(response){
+
+            console.log(nutritionResponse);
+
             $("#nutrition-info").text(JSON.stringify(response));
         });
     }); 
@@ -92,6 +95,7 @@ $(document).ready(function(){
 
 // CocktailDB
 
+/*
 var settings = {
 	"async": true,
 	"crossDomain": true,
@@ -106,24 +110,30 @@ var settings = {
 $.ajax(settings).done(function (response) {
 	console.log(response);
 });
+*/
 
 
 
 
 
+//$("#find-cocktail").on("click", function(event) {
+//    event.preventDefault();
+//    var cocktail = $("#cocktail-input").val();
 
-$("#find-cocktail").on("click", function(event) {
-    event.preventDefault();
-    var cocktail = $("#cocktail-input").val();
-    var queryURL = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=" + cocktail;
+    var cocktail = "bloody mary";
+
+    var queryURL = "https://www.thecocktaildb.com/api/json/v2/9973533/search.php?s=" + cocktail;
     
     $.ajax({
       url: queryURL,
       method: "GET"
     }).then(function(response) {
-      $("#cocktail-info").text(JSON.stringify(response));
+      
+      console.log(response);
+      
+        //$("#cocktail-info").text(JSON.stringify(response));
     });
-});
+//});
 
 
 
