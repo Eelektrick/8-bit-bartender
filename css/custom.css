@@ -76,20 +76,26 @@ body {
     min-height: 100vh;
     flex-direction: column;
     }
-  main {
+
+main {
     flex: 1 0 auto;
   }
 
-.content {
+.search-content {
     min-width: 50vw;
     min-height: 50vh;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    background-image: url(../assets/bar-image.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
 }
 
-.content div {
+.search-content div {
     width: 50vw;
     margin: 30 px;
+    margin-bottom: 30px;
 }
