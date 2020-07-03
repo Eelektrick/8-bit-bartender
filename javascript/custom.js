@@ -39,7 +39,7 @@ $(document).ready(function(){
 
     //click nutrition button will show nutrition from nutrition API
     $("#find-nutrition").on("click", function(event){
-        event.preventDefault();
+       event.preventDefault();
 
         var settings = {
             "async": true,
@@ -62,6 +62,9 @@ $(document).ready(function(){
         }
 
         $.ajax(settings).then(function(response){
+
+            console.log(nutritionResponse);
+
             $("#nutrition-info").text(JSON.stringify(response));
         });
     }); 
@@ -87,6 +90,70 @@ $(document).ready(function(){
             <div id="second" class="hero-second" style="transform: rotate(216deg);"></div>
         </div>
     </div>
+
+</div>
+*/
+
+
+// CocktailDB
+
+/*
+var settings = {
+	"async": true,
+	"crossDomain": true,
+	"url": "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=bloody_mary",
+	"method": "GET",
+	"headers": {
+		"x-rapidapi-host": "the-cocktail-db.p.rapidapi.com",
+		"x-rapidapi-key": "4aae919d49msh403d2dc296b2570p119298jsncca5c46f499a"
+	}
+}
+
+$.ajax(settings).done(function (response) {
+	console.log(response);
+});
+*/
+
+
+
+
+
+//$("#find-cocktail").on("click", function(event) {
+//    event.preventDefault();
+//    var cocktail = $("#cocktail-input").val();
+
+    var cocktail = "bloody mary";
+
+    var queryURL = "https://www.thecocktaildb.com/api/json/v2/9973533/search.php?s=" + cocktail;
+    
+    $.ajax({
+      url: queryURL,
+      method: "GET"
+    }).then(function(response) {
+      
+      console.log(response);
+      var ingredients = ["strIngredient1", "strIngredient2", "strIngredient3", "strIngredient4", "strIngredient5", "strIngredient6", "strIngredient7", "strIngredient8", "strIngredient9", "strIngredient10"]
+     
+      $(".collapsible-body").append("<ul id='ingredient-list'></ul>")
+
+      for (i = 1; i < ingredients.length; i++) {
+        if(response.drinks[0][ingredients[i]] !== null) {
+            //console.log(response.drinks[0][ingredients[i]]);
+            var ingredient = response.drinks[0][ingredients[i]];
+            $("#ingredient-list").append("<li>" + ingredient + "</li>");
+
+            // Use ingredient as the input variable and loop it through the nutrition api
+            // Add the results to the nutrition section
+        }
+      };
+      
+      
+    });
+//});
+
+
+
+
     */
 
 
@@ -106,6 +173,7 @@ $(document).ready(function(){
     $.ajax(settings).done(function (response) {
         console.log(response);
     });
+
 
     $("#find-cocktail").on("click", function(event) {
         event.preventDefault();
