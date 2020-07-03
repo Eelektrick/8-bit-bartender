@@ -84,8 +84,7 @@ $(document).ready(function(){
 });  
 
 
-</div>
-*/
+
 
 
 // CocktailDB
@@ -173,5 +172,4 @@ $.ajax(settings).done(function (response) {
     //   console.log(response);
     //     //$("#cocktail-info").text(JSON.stringify(response));
     // })
-});
 
