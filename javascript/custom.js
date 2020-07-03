@@ -81,6 +81,12 @@ $(document).ready(function(){
 </div>
 */
 
+});  
+
+
+</div>
+*/
+
 
 // CocktailDB
 
@@ -135,13 +141,7 @@ $.ajax(settings).done(function (response) {
       };
       
       
-    });
-//});
-
-
-
-
-    */
+   
 
 
     // CocktailDB
@@ -161,6 +161,8 @@ $.ajax(settings).done(function (response) {
         })
     });
 
+});
+
     //For testing purposes while button is inop
     // var cocktail = "moscow mule";
     // var queryURL = "https://www.thecocktaildb.com/api/json/v2/9973533/search.php?s=" + cocktail;
@@ -172,3 +174,4 @@ $.ajax(settings).done(function (response) {
     //     //$("#cocktail-info").text(JSON.stringify(response));
     // })
 });
+
