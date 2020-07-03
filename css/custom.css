@@ -76,3 +76,33 @@
     -ms-transform-origin:50% 100%;
     transform-origin:50% 100%
 }
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    }
+
+main {
+    flex: 1 0 auto;
+  }
+
+.search-content {
+    min-width: 50vw;
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-image: url(../assets/bar-image.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+}
+
+.search-content div {
+    width: 50vw;
+    margin: 30 px;
+    margin-bottom: 30px;
+}
+
