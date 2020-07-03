@@ -24,19 +24,6 @@ $(document).ready(function(){
         $('#second').css("transform", "rotate(" + second + "deg)");
     }
 
-    //click function for finding cocktail being searched
-    $("#find-cocktail").on("click", function(event) {
-        event.preventDefault();
-        var cocktail = $("#cocktail-input").val();
-        var queryURL = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=" + cocktail;
-        $.ajax({
-          url: queryURL,
-          method: "GET"
-        }).then(function(response) {
-          $("#cocktail-info").text(JSON.stringify(response));
-        });
-    });
-
     //click nutrition button will show nutrition from nutrition API
     $("#find-nutrition").on("click", function(event){
        event.preventDefault();
@@ -159,33 +146,29 @@ $.ajax(settings).done(function (response) {
 
     // CocktailDB
 
-    var settings = {
-        "async": true,
-        "crossDomain": true,
-        "url": "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=bloody_mary",
-        "method": "GET",
-        "headers": {
-            "x-rapidapi-host": "the-cocktail-db.p.rapidapi.com",
-            "x-rapidapi-key": "4aae919d49msh403d2dc296b2570p119298jsncca5c46f499a"
-        }
-    }
-
-    $.ajax(settings).done(function (response) {
-        console.log(response);
-    });
-
-
     $("#find-cocktail").on("click", function(event) {
+      
         event.preventDefault();
-        var cocktail = $("#cocktail-input").val();
-        var queryURL = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=" + cocktail;
-        
+
+        var cocktail = $("#nes-input").val();     //"moscow mule";
+        var queryURL = "https://www.thecocktaildb.com/api/json/v2/9973533/search.php?s=" + cocktail;
         $.ajax({
         url: queryURL,
         method: "GET"
         }).then(function(response) {
-        $("#cocktail-info").text(JSON.stringify(response));
-        });
+        console.log(response);
+            //$("#cocktail-info").text(JSON.stringify(response));
+        })
     });
 
+    //For testing purposes while button is inop
+    // var cocktail = "moscow mule";
+    // var queryURL = "https://www.thecocktaildb.com/api/json/v2/9973533/search.php?s=" + cocktail;
+    // $.ajax({
+    //   url: queryURL,
+    //   method: "GET"
+    // }).then(function(response) {
+    //   console.log(response);
+    //     //$("#cocktail-info").text(JSON.stringify(response));
+    // })
 });
