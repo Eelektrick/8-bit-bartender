@@ -1,3 +1,8 @@
+#background {
+    position: absolute;
+    max-height: 100%;
+    max-width: 100%;
+}
 
 .hero-circle {
     width:180px;
@@ -71,6 +76,7 @@
     -ms-transform-origin:50% 100%;
     transform-origin:50% 100%
 }
+
 body {
     display: flex;
     min-height: 100vh;
@@ -99,3 +105,4 @@ main {
     margin: 30 px;
     margin-bottom: 30px;
 }
+
