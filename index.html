@@ -20,9 +20,7 @@
 
     <!-- Local CSS -->
     <link rel="stylesheet" href="css/custom.css">
-   
-    <!-- jQuery -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
 </head>
 
 <body>
@@ -32,21 +30,24 @@
         <img src="/assets/tapper-screenshot-bonus-rootbeer.jpg" alt="Bartender background image">
     </div>
 
-<!-- User Input and Search Buttons -->
-<div class="row">
-    <div class="col s6 offset-s2 valign wrapper">
-        <textarea class="nes-textarea"  id="cocktail-input"></textarea>
+<div class="container">
+
+
+    <!-- User Input and Search Buttons -->
+    <div class="row">
+        <div class="col s6 offset-s2 valign wrapper">
+            <textarea class="nes-textarea"  id="cocktail-input"></textarea>
+        </div>
+
+
+        <!-- Search Button -->
+        <button type="button" class="nes-btn is-primary">Search</button>
+
+
+        <div class="col s2">
+            <button type="button" class="nes-btn is-primary" id="find-cocktail">Search</button>
+        </div>
     </div>
-
-    
-    <!-- Search Button -->
-    <!-- <button type="button" class="nes-btn is-primary">Search</button> -->
-
-
-    <div class="col s2">
-        <button type="button" class="nes-btn is-primary" id="find-cocktail">Search</button>
-    </div>
-</div>
 
     <header>
         <nav class="grey">
@@ -80,14 +81,22 @@
             </div>
             
             <!-- Accordion Element -->
-            <div class="collapsible">
-                <div button type="button" class="nes-btn is-warning"></button></i>Ingredients</div>
-                <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-                <br>
-                <div button type="button" class="nes-btn is-warning"></button></i>Nutrition</div>
-                <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-            </div>
-          
+
+            <!-- Test Accordian -->
+
+            <ul class="collapsible" id="ing-group">
+                <li>
+                  <div class="collapsible-header nes-btn is-warning">Ingredients</div>
+                  <div class="collapsible-body" id="ingredientCollapse"></div>
+                </li>
+            </ul>
+            <ul class="collapsible" id="nutr-group">
+              <li>
+                <div class="collapsible-header nes-btn is-warning">Nutrition</div>
+                <div class="collapsible-body" id="nutritionCollapse">Lorem Ipsum</div>
+              </li>
+            </ul>
+
         </div>
     </main>
 
@@ -98,19 +107,8 @@
             © 2017 Copyright Text
         </div>
     </footer>
-
-    </div>
-    <!-- jQuery -->
-    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>     -->
-    <!-- Third Party API -->
-    <script src="javascript/moment.js"></script>
-    <!-- Local JavaScript -->
-    <script src="javascript/custom.js"></script>
-    <!-- Materialize JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-
-
 </div>
+
 <!-- jQuery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>   
 <!-- Third Party API -->
