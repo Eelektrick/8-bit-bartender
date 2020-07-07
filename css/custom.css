@@ -1,5 +1,7 @@
 #background {
     position: absolute;
+    z-index: -1;
+    text-align: center;
     max-height: 100%;
     max-width: 100%;
 }
@@ -83,11 +85,11 @@ body {
     flex-direction: column;
     }
 
-main {
+/* main {
     flex: 1 0 auto;
-  }
+  } */
 
-.search-content {
+/* .search-content {
     min-width: 50vw;
     min-height: 50vh;
     display: flex;
@@ -98,11 +100,11 @@ main {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: right;
-}
+} */
 
-.search-content div {
+/* .search-content div {
     width: 50vw;
     margin: 30 px;
     margin-bottom: 30px;
-}
+} */
 
