@@ -91,7 +91,10 @@ body {
     }
 footer {
     position: sticky;
+    padding-bottom: 12px;
+    color: grey;
     text-align: center;
+
 }
 
 /* main {
