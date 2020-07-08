@@ -64,6 +64,18 @@ $(document).ready(function(){
         var fat = '';
         var carbs = '';
         var sugar = '';
+
+        var totalCalories = '';
+        var totalSodium = '';
+        var totalFat = '';
+        var totalCarbs = '';
+        var totalSugar = '';
+
+        $("#nutritionCollapse").append("<div><span>Calories: </span><span id='calories'></span></div>");
+        $("#nutritionCollapse").append("<div><span>Sodium: </span><span id='sodium'></span></div>");
+        $("#nutritionCollapse").append("<div><span>Fat: </span><span id='fat'></span></div>");
+        $("#nutritionCollapse").append("<div><span>Carbs: </span><span id='carbs'></span></div>");
+        $("#nutritionCollapse").append("<div><span>Sugar: </span><span id='sugar'></span></div>");
         
         console.log(response);
         var ingredients = ["strIngredient1", "strIngredient2", "strIngredient3", "strIngredient4", "strIngredient5", "strIngredient6", "strIngredient7", "strIngredient8", "strIngredient9", "strIngredient10"];
@@ -79,39 +91,41 @@ $(document).ready(function(){
 
                 var settings = "https://api.nutritionix.com/v1_1/search/" + ingredient + "?results=0:20&fields=item_name,brand_name,item_id,nf_calories,nf_sodium,nf_total_fat,nf_total_carbohydrate,nf_sugars&appId=f15b331a&appKey=5dd831bff3255ac412edcba64b74b1c0";
 
-                var totalCalories = '';
-                var totalSodium = '';
-                var totalFat = '';
-                var totalCarbs = '';
-                var totalSugar = '';
-
                 $.ajax(settings).done(function (nutr_response) {
 
                     //adding up total calories of ingrediants
                     calories = parseFloat(nutr_response.hits[0].fields.nf_calories);
                     totalCalories = +totalCalories + +calories;
-                    console.log("Total calories: " + totalCalories);
+                    //console.log("Total calories: " + totalCalories);
 
                     //adding up total sodium of ingrediants
                     sodium = parseFloat(nutr_response.hits[0].fields.nf_sodium);
                     totalSodium = +totalSodium + +sodium;
-                    console.log("Total sodium: " + totalSodium);
+                    //console.log("Total sodium: " + totalSodium);
 
                     //adding up total fat of ingrediants
                     fat = parseFloat(nutr_response.hits[0].fields.nf_total_fat);
                     totalFat = +totalFat + +fat;
-                    console.log("Total fat: " + totalFat);
+                    //console.log("Total fat: " + totalFat);
 
                     //adding up total carbs of ingrediants
                     carbs = parseFloat(nutr_response.hits[0].fields.nf_total_carbohydrate);
                     totalCarbs = +totalCarbs + +carbs;
-                    console.log("Total carbs: " + totalCarbs);
+                    //console.log("Total carbs: " + totalCarbs);
 
                     //adding up total sugar of ingrediants
                     sugar = parseFloat(nutr_response.hits[0].fields.nf_sugars);
                     totalSugar = +totalSugar + +sugar;
-                    console.log("Total sugar: " + totalSugar);
+                    //console.log("Total sugar: " + totalSugar);
+                    
+                    $("#calories").text(totalCalories.toFixed(0));
+                    $("#sodium").text(totalSodium.toFixed(0));
+                    $("#fat").text(totalFat.toFixed(0));
+                    $("#carbs").text(totalCarbs.toFixed(0));
+                    $("#sugar").text(totalSugar.toFixed(0));
+                    
                 });
+
             }
         };
       
