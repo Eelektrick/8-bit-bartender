@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .brand {
     height: 64px;
     width: 64px;
@@ -9,6 +10,14 @@
     text-align: center;
     /* max-height: 100%;
     max-width: 100%; */
+=======
+#background {
+    position: absolute;
+    z-index: -1;
+    text-align: center;
+    max-height: 100%;
+    max-width: 100%;
+>>>>>>> ae05dfb9bd2f1a5db615cac16769c1a78d578cae
 }
 
 .hero-circle {
@@ -115,4 +124,9 @@ footer {
     width: 50vw;
     margin: 30 px;
     margin-bottom: 30px;
+<<<<<<< HEAD
 } */
+=======
+} */
+
+>>>>>>> ae05dfb9bd2f1a5db615cac16769c1a78d578cae
