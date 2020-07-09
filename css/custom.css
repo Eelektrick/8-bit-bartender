@@ -4,11 +4,60 @@
 }
 
 #background {
-    /* position: absolute; */
+    margin-left: -25px;
+    margin-right: -25px;
+    margin-bottom: -75px;
     z-index: -1;
-    text-align: center;
-    /* max-height: 100%;
-    max-width: 100%; */
+    overflow: hidden;
+    height: 260px;
+}
+
+#backgroundImage {
+    width: 100%;
+    overflow: hidden;
+}
+
+#searchContainer {
+    margin-top: 35px;
+}
+
+.nesWhite {
+    background-color: white;
+}
+
+.favBtn {
+    width: 100%;
+}
+
+#inputCol {
+    width: 100%;
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+#searchCol {
+    padding-left: 0px;
+    padding-right: 10px;
+    border-color: white;
+}
+
+#find-Cocktail {
+    border-color: white;
+}
+
+#ing-group {
+    border: none;
+    -webkit-box-shadow: none;
+    border-bottom: none;
+}
+
+.collapsible-header {
+    width: 98%;
+}
+
+.collapsible-body {
+    border: none;
+    color: white;
 }
 
 .hero-circle {

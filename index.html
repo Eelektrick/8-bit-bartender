@@ -59,34 +59,34 @@
             <main>
                 <!-- Background image -->
                 <div id="background">
-                    <img class="responsive-img"
+                    <img class="responsive-img" id="backgroundImage"
                         src="assets/tapper-screenshot-bonus-rootbeer.jpg"
                         alt="Bartender background image">
                 </div>
 
 
                 <div class="search-content"></div>
-                <div class="container section">
+                <div class="container section" id="searchContainer">
 
                     <div
-                        class="nes-container with-title section">
+                        class="nes-container with-title section" id="nesWhite">
                         <span class="title">Favorites</span>
-                        <button class="nes-btn">Favorite
+                        <button class="nes-btn favBtn">Favorite
                             1</button>
-                        <button class="nes-btn">Favorite
+                        <button class="nes-btn favBtn">Favorite
                             2</button>
-                        <button class="nes-btn">Favorite
+                        <button class="nes-btn favBtn">Favorite
                             3</button>
                     </div>
 
                     <!-- User Input and Search Buttons -->
                     <div class="row section">
                         <div
-                            class="col s6 offset-s2 valign wrapper">
-                            <textarea class="nes-textarea"
+                            class="col s12 valign wrapper" id="inputCol">
+                            <textarea class="nes-textarea nesWhite"
                                 id="cocktail-input"></textarea>
                         </div>
-                        <div class="row section">
+                        <div class="col s12" id="searchCol">
                             <button type="button"
                                 class="nes-btn is-primary"
                                 id="find-cocktail">Search</button>
