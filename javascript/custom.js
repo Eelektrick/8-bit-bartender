@@ -132,6 +132,28 @@ $(document).ready(function(){
     });
 //});
 
+//save bu
+$("#saveBtn").on("click", function() {
+    searchbar = $("#enterCocktail").val();
+    mySave(searchbar);
+});
 
+//Save Funtion
+function mySave(searchbar) {
 
+    //moves save down after new one
+
+    localStorage.removeItem("2");
+    var move1 = localStorage.getItem("1");
+    localStorage.setItem("2", move1);
+    var move0 = localStorage.getItem("0");
+    localStorage.setItem("1", move0);
+    localStorage.setItem("0", searchbar)
+  }
+  function myLoad() {
+    $("#fav-1").text(localStorage.getItem("0"))
+    $("#fav-2").text(localStorage.getItem("1"))
+    $("#fav-3").text(localStorage.getItem("2"))
+
+  };
 });
