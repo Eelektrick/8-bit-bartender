@@ -17,10 +17,6 @@
         href="https://unpkg.com/nes.css@2.3.0/css/nes.min.css"
         rel="stylesheet" />
 
-    <link
-        href="https://unpkg.com/nes.css@2.3.0/css/nes.min.css"
-        rel="stylesheet" />
-
     <!-- Press Start 2P Font -->
     <link
         href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
@@ -69,8 +65,8 @@
                 <div class="container section" id="searchContainer">
 
                     <div
-                        class="nes-container with-title section" id="nesWhite">
-                        <span class="title">Favorites</span>
+                        class="nes-container with-title section nesBlue">
+                        <span class="title" style="background-color: #E0E0E0">Favorites</span>
                         <button class="nes-btn favBtn">Favorite
                             1</button>
                         <button class="nes-btn favBtn">Favorite
@@ -80,31 +76,28 @@
                     </div>
 
                     <!-- User Input and Search Buttons -->
-                    <div class="row section">
+                    <div class="row section" id="inputRow">
                         <div
                             class="col s12 valign wrapper" id="inputCol">
                             <textarea class="nes-textarea nesWhite"
                                 id="cocktail-input"></textarea>
                         </div>
-                        <div class="col s12" id="searchCol">
+                   
+
                             <button type="button"
-                                class="nes-btn is-primary"
+                                class="nes-btn is-primary col s12"
                                 id="find-cocktail">Search</button>
-                        </div>
-
-                    </div>
-
-                    
+                </div>
 
                     <!-- Accordion Element -->
 
-                    <ul class="collapsible section"
+                    <ul class="collapsible"
                         id="ing-group">
                         <li>
                             <div
                                 class="collapsible-header nes-btn is-warning">
                                 Ingredients</div>
-                            <div class="collapsible-body"
+                            <div class="collapsible-body nes-container"
                                 id="ingredientCollapse">
                             </div>
                         </li>
@@ -116,8 +109,7 @@
                                 class="collapsible-header nes-btn is-warning">
                                 Nutrition</div>
                             <div class="collapsible-body"
-                                id="nutritionCollapse">Lorem
-                                Ipsum</div>
+                                id="nutritionCollapse"></div>
                         </li>
                     </ul>
 
