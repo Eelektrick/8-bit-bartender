@@ -4,11 +4,99 @@
 }
 
 #background {
-    /* position: absolute; */
+    margin-left: -25px;
+    margin-right: -25px;
+    margin-bottom: -75px;
     z-index: -1;
-    text-align: center;
-    /* max-height: 100%;
-    max-width: 100%; */
+    overflow: hidden;
+    height: 260px;
+    background-color: #6D2401;
+}
+
+#backgroundImage {
+    width: 100%;
+    overflow: hidden;
+}
+
+#searchContainer {
+    margin-top: 35px;
+}
+
+.nesBlue {
+    background-color: #000F6C;
+}
+
+.favBtn {
+    width: 100%;
+    background-color: #E0E0E0
+}
+
+#inputRow {
+    padding-bottom: 4px;
+}
+
+#inputCol {
+    width: 100%;
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+#cocktail-input {
+    background-color: #E0E0E0;
+}
+
+#searchCol {
+    padding-left: 0px;
+    padding-right: 10px;
+    border-color: white;
+    width: 100%;
+}
+
+#find-Cocktail {
+    border-color: white;
+    width: 100%;
+    display: inline-block;
+    padding-left: 0px;
+    padding-right: 10px;
+    border-color: white;
+    width: 100%;
+    height: 100%;
+}
+
+#ing-group {
+    border: none;
+    /* -webkit-box-shadow: none; */
+    border-bottom: none;
+    padding: 0;
+}
+
+#ingredientCollapse {
+    background-color: #E0E0E0;
+    color: black;
+    border-style: solid;
+    border-radius: black;
+}
+
+#nutr-group {
+    border: none;
+    /* -webkit-box-shadow: none; */
+    border-bottom: none;
+    padding: 0;
+}
+
+#nutritionCollapse {
+    background-color: #E0E0E0;
+    color: black;
+}
+
+.collapsible-header {
+    width: 98%;
+    margin-top: 0;
+}
+
+.collapsible-body {
+    border: none;
+    color: white;
 }
 
 .hero-circle {
@@ -88,7 +176,9 @@ body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
+    background-color: #6D2401;
     }
+
 footer {
     position: sticky;
     padding-bottom: 12px;

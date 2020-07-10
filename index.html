@@ -3,28 +3,18 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-        content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>8-Bit Bartender</title>
 
     <!-- Materialize CSS -->
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
     <!-- NES CSS -->
 
-    <link
-        href="https://unpkg.com/nes.css@2.3.0/css/nes.min.css"
-        rel="stylesheet" />
-
-    <link
-        href="https://unpkg.com/nes.css@2.3.0/css/nes.min.css"
-        rel="stylesheet" />
+    <link href="https://unpkg.com/nes.css@2.3.0/css/nes.min.css" rel="stylesheet" />
 
     <!-- Press Start 2P Font -->
-    <link
-        href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 
     <!-- Local CSS -->
     <link rel="stylesheet" href="css/custom.css">
@@ -35,114 +25,94 @@
 
 
 
-        <header>
+    <header>
 
-            <nav class="grey">
-                <div class="nav-wrapper">
+        <nav class="grey">
+            <div class="nav-wrapper">
 
-                    <a class="brand-logo">
-                        <!-- <div class="brand"> -->
-                        <img src="assets/8bit-logo.pdf"
-                            alt="8-Bit-Logo"
-                            class="responsive-img">
-                        <!-- </div> -->
-                    </a>
+                <a class="brand-logo">
+                    <!-- <div class="brand"> -->
+                    <img src="assets/8bit-logo.pdf" alt="8-Bit-Logo" class="responsive-img">
+                    <!-- </div> -->
+                </a>
 
+            </div>
+        </nav>
+
+    </header>
+
+    <div class="container">
+
+
+        <main>
+            <!-- Background image -->
+            <div id="background">
+                <img class="responsive-img" id="backgroundImage" src="assets/tapper-screenshot-bonus-rootbeer.jpg"
+                    alt="Bartender background image">
+            </div>
+
+
+            <div class="search-content"></div>
+            <div class="container section" id="searchContainer">
+
+                <div class="nes-container with-title section nesBlue">
+                    <span class="title" style="background-color: #E0E0E0">Favorites</span>
+                    <button class="nes-btn favBtn">Favorite
+                        1</button>
+                    <button class="nes-btn favBtn" id="fav-2">Favorite
+                        2</button>
+                    <button class="nes-btn favBtn" id="fav-3">Favorite
+                        3</button>
                 </div>
-            </nav>
 
-        </header>
-
-        <div class="container">
-
-
-            <main>
-                <!-- Background image -->
-                <div id="background">
-                    <img class="responsive-img"
-                        src="assets/tapper-screenshot-bonus-rootbeer.jpg"
-                        alt="Bartender background image">
-                </div>
-
-
-                <div class="search-content"></div>
-                <div class="container section">
-
-                    <div
-                        class="nes-container with-title section">
-                        <span class="title">Favorites</span>
-                        <button class="nes-btn">Favorite
-                            1</button>
-                        <button class="nes-btn">Favorite
-                            2</button>
-                        <button class="nes-btn">Favorite
-                            3</button>
+                <!-- User Input and Search Buttons -->
+                <div class="row section" id="inputRow">
+                    <div class="col s12 valign wrapper" id="inputCol">
+                        <textarea class="nes-textarea nesWhite" id="cocktail-input"></textarea>
                     </div>
 
-                    <!-- User Input and Search Buttons -->
-                    <div class="row section">
-                        <div
-                            class="col s6 offset-s2 valign wrapper">
-                            <textarea class="nes-textarea"
-                                id="cocktail-input"></textarea>
-                        </div>
-                        <div class="row section">
-                            <button type="button"
-                                class="nes-btn is-primary"
-                                id="find-cocktail">Search</button>
-                        </div>
 
-                    </div>
-
-                    
-
-                    <!-- Accordion Element -->
-
-                    <ul class="collapsible section"
-                        id="ing-group">
-                        <li>
-                            <div
-                                class="collapsible-header nes-btn is-warning">
-                                Ingredients</div>
-                            <div class="collapsible-body"
-                                id="ingredientCollapse">
-                            </div>
-                        </li>
-                    </ul>
-                    <ul class="collapsible section"
-                        id="nutr-group">
-                        <li>
-                            <div
-                                class="collapsible-header nes-btn is-warning">
-                                Nutrition</div>
-                            <div class="collapsible-body"
-                                id="nutritionCollapse">Lorem
-                                Ipsum</div>
-                        </li>
-                    </ul>
-
+                    <button type="button" class="nes-btn is-primary col s12" id="find-cocktail">Search</button>
                 </div>
 
-            </main>
+                <!-- Accordion Element -->
+
+                <ul class="collapsible" id="ing-group">
+                    <li>
+                        <div class="collapsible-header nes-btn is-warning">
+                            Ingredients</div>
+                        <div class="collapsible-body nes-container" id="ingredientCollapse">
+                        </div>
+                    </li>
+                </ul>
+                <ul class="collapsible section" id="nutr-group">
+                    <li>
+                        <div class="collapsible-header nes-btn is-warning">
+                            Nutrition</div>
+                        <div class="collapsible-body" id="nutritionCollapse"></div>
+                    </li>
+                </ul>
+
+            </div>
+
+        </main>
 
 
-        </div>
- 
-            <footer class="page-footer grey">
-                    © 2017 Copyright Text
-            </footer>
+    </div>
+
+    <footer class="page-footer grey">
+        © 2017 Copyright Text
+    </footer>
 
 
     <!-- jQuery -->
-    <script
-        src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- Third Party API -->
     <script src="javascript/moment.js"></script>
     <!-- Local JavaScript -->
     <script src="javascript/custom.js"></script>
     <!-- Materialize JS -->
-    <script
-        src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
 </body>
 
