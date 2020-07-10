@@ -65,7 +65,7 @@
 
 #ing-group {
     border: none;
-    -webkit-box-shadow: none;
+    /* -webkit-box-shadow: none; */
     border-bottom: none;
     padding: 0;
 }
@@ -79,7 +79,7 @@
 
 #nutr-group {
     border: none;
-    -webkit-box-shadow: none;
+    /* -webkit-box-shadow: none; */
     border-bottom: none;
     padding: 0;
 }
