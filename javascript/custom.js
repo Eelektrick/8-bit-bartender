@@ -1,5 +1,8 @@
 $(document).ready(function(){
 
+    var initialCocktail = $("#fav-1").text();
+    searchCocktail(initialCocktail);
+
     var allCollapsibles = $('.collapsible');
     allCollapsibles.collapsible();
 
@@ -45,12 +48,31 @@ $(document).ready(function(){
     //}); 
 
 
+// Update city if you click the search button
+$("#find-cocktail").on("click", function(event) {
+    event.preventDefault();
+    var cocktail = $("#cocktail-input").val();
+    searchCocktail(cocktail);
+});
 
-//$("#find-cocktail").on("click", function(event) {
-//    event.preventDefault();
-//    var cocktail = $("#cocktail-input").val();
+// Update city if you click a previous city
+$(".favBtn").on("click", "button", function() {
+    var cocktail = $(this).text();
+    searchCocktail(cocktail);
+});
 
-    var cocktail = "bloody mary";
+ // Update city if you hit enter
+ $(document).on('keypress',function(e) {
+    if(e.which == 13) {
+        var cocktail = $("#cocktail-input").val();
+    };
+ });
+
+
+
+function searchCocktail(cocktail) {    
+    
+    //var cocktail = "bloody mary";
 
     var queryURL = "https://www.thecocktaildb.com/api/json/v2/9973533/search.php?s=" + cocktail;
     
@@ -71,6 +93,7 @@ $(document).ready(function(){
         var totalCarbs = '';
         var totalSugar = '';
 
+        $("#nutritionCollapse").empty();
         $("#nutritionCollapse").append("<div><span>Calories: </span><span id='calories'></span></div>");
         $("#nutritionCollapse").append("<div><span>Sodium: </span><span id='sodium'></span></div>");
         $("#nutritionCollapse").append("<div><span>Fat: </span><span id='fat'></span></div>");
@@ -79,6 +102,8 @@ $(document).ready(function(){
         
         console.log(response);
         var ingredients = ["strIngredient1", "strIngredient2", "strIngredient3", "strIngredient4", "strIngredient5", "strIngredient6", "strIngredient7", "strIngredient8", "strIngredient9", "strIngredient10"];
+
+        $("#ingredientCollapse").empty();
 
         for (i = 0; i < ingredients.length; i++) {
             if(response.drinks[0][ingredients[i]] !== null) {
@@ -130,11 +155,16 @@ $(document).ready(function(){
         };
       
     });
+};
+
+// Update city if you click the search icon
+//$("#searchBtn").on("click", function() {
 //});
 
-//save bu
+
+// save favorites
 $("#saveBtn").on("click", function() {
-    searchbar = $("#enterCocktail").val();
+    searchbar = $("#cocktail-input").val();
     mySave(searchbar);
 });
 
