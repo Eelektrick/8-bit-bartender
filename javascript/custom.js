@@ -129,27 +129,52 @@ function searchCocktail(cocktail) {
 
                     //adding up total calories of ingrediants
                     calories = parseFloat(nutr_response.hits[0].fields.nf_calories);
-                    totalCalories = +totalCalories + +calories;
+                    if (nutr_response.hits[0].fields.nf_calories === null) {
+                        totalCalories = +totalCalories + +0;
+                    } else {
+                        totalCalories = +totalCalories + +calories;
+                    }
+                    //totalCalories = +totalCalories + +calories;
                     //console.log("Total calories: " + totalCalories);
 
                     //adding up total sodium of ingrediants
                     sodium = parseFloat(nutr_response.hits[0].fields.nf_sodium);
-                    totalSodium = +totalSodium + +sodium;
+                    if (nutr_response.hits[0].fields.nf_sodium === null) {
+                        totalSodium = +totalSodium + +0;
+                    } else {
+                        totalSodium = +totalSodium + +sodium;
+                    }
+                    //totalSodium = +totalSodium + +sodium;
                     //console.log("Total sodium: " + totalSodium);
 
                     //adding up total fat of ingrediants
                     fat = parseFloat(nutr_response.hits[0].fields.nf_total_fat);
-                    totalFat = +totalFat + +fat;
+                    if (nutr_response.hits[0].fields.nf_total_fat === null) {
+                        totalFat = +totalFat + +0;
+                    } else {
+                        totalFat = +totalFat + +fat;
+                    }
+                    //totalFat = +totalFat + +fat;
                     //console.log("Total fat: " + totalFat);
 
                     //adding up total carbs of ingrediants
                     carbs = parseFloat(nutr_response.hits[0].fields.nf_total_carbohydrate);
-                    totalCarbs = +totalCarbs + +carbs;
+                    if (nutr_response.hits[0].fields.nf_total_carbohydrate === null) {
+                        totalCarbs = +totalCarbs + +0;
+                    } else {
+                        totalCarbs = +totalCarbs + +carbs;
+                    }
+                    //totalCarbs = +totalCarbs + +carbs;
                     //console.log("Total carbs: " + totalCarbs);
 
                     //adding up total sugar of ingrediants
                     sugar = parseFloat(nutr_response.hits[0].fields.nf_sugars);
-                    totalSugar = +totalSugar + +sugar;
+                    if (nutr_response.hits[0].fields.nf_sugars === null) {
+                        totalSugar = +totalSugar + +0;
+                    } else {
+                        totalSugar = +totalSugar + +sugar;
+                    }
+                    //totalSugar = +totalSugar + +sugar;
                     //console.log("Total sugar: " + totalSugar);
                     
                     $("#calories").text(totalCalories.toFixed(0));
@@ -194,21 +219,21 @@ function mySave(searchbar) {
   function myLoad() {
     if (localStorage.getItem("0") === null) {
         $("#fav-1").text("");
-        $("#fav-1").attr("style", "height:35px;");
+        $("#fav-1").attr("style", "height:44px;");
     } else {
         $("#fav-1").text(localStorage.getItem("0"));
     }
     
     if (localStorage.getItem("1") === null) {
         $("#fav-2").text("");
-        $("#fav-2").attr("style", "height:35px;");
+        $("#fav-2").attr("style", "height:44px;");
     } else {
         $("#fav-2").text(localStorage.getItem("1"));
     } 
 
     if (localStorage.getItem("2") === null) {
         $("#fav-3").text("");
-        $("#fav-3").attr("style", "height:35px;");
+        $("#fav-3").attr("style", "height:44px;");
     } else {
         $("#fav-3").text(localStorage.getItem("2"));
     } 
