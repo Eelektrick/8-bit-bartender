@@ -16,6 +16,14 @@
     <!-- Press Start 2P Font -->
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
 
+    <!-- Fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+
     <!-- Local CSS -->
     <link rel="stylesheet" href="css/custom.css" />
 </head>
@@ -55,17 +63,18 @@
 
                 <!-- User Input Area-->
                 <div class="row section" id="inputRow">
-                    <div class="col s12 valign wrapper" id="inputCol">
+                    <div class="col s10 valign wrapper" id="inputCol" style="display:inline-block">
                         <textarea class="nes-textarea nesWhite" id="cocktail-input"></textarea>
                     </div>
+                    <button type="button" class="nes-btn is-primary col s2" id="saveBtn" style="display:inline-block">
+                        <i class="far fa-save"></i>
+                    </button>
 
                     <!-- Search and Save Buttons -->
                     <button type="button" class="nes-btn is-primary col s12" id="find-cocktail">
                         Search
                     </button>
-                    <button type="button" class="nes-btn is-primary col s12" id="saveBtn">
-                        Save to Favorites
-                    </button>
+                    
                 </div>
 
                 <!-- Accordion Element -->
