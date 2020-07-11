@@ -212,9 +212,11 @@ body {
     }
 
 footer {
-    /* position: sticky; */
+    position: sticky;
+    margin-top: auto;
     bottom: 0;
-    width: 100%;
+    box-sizing: border-box;
+    width: 110%;
     padding-bottom: 13px;
     background-color: #E0E0E0;
     text-align: center;
