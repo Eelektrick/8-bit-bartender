@@ -194,18 +194,21 @@ function mySave(searchbar) {
   function myLoad() {
     if (localStorage.getItem("0") === null) {
         $("#fav-1").text("");
+        $("#fav-1").attr("style", "height:35px;");
     } else {
         $("#fav-1").text(localStorage.getItem("0"));
     }
     
     if (localStorage.getItem("1") === null) {
         $("#fav-2").text("");
+        $("#fav-2").attr("style", "height:35px;");
     } else {
         $("#fav-2").text(localStorage.getItem("1"));
     } 
 
     if (localStorage.getItem("2") === null) {
         $("#fav-3").text("");
+        $("#fav-3").attr("style", "height:35px;");
     } else {
         $("#fav-3").text(localStorage.getItem("2"));
     } 
