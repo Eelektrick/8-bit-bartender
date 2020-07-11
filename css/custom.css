@@ -26,7 +26,6 @@
 }
 
 #backgroundImage {
-    /* position: relative; */
     z-index: ;
     min-width: 350px;
     min-height: 225px;
@@ -41,10 +40,6 @@
 .nesBlue {
     margin-top: 50px;
     background-color: #000F6C;
-}
-
-span .title {
-    
 }
 
 .favBtn {
@@ -95,7 +90,6 @@ span .title {
 
 #ing-group {
     border: none;
-    /* -webkit-box-shadow: none; */
     border-bottom: none;
     padding: 0;
 }
@@ -109,7 +103,6 @@ span .title {
 
 #nutr-group {
     border: none;
-    /* -webkit-box-shadow: none; */
     border-bottom: none;
     padding: 0;
 }
@@ -130,11 +123,12 @@ span .title {
 }
 
 .hero-circle {
-    width:180px;
-    height:180px;
+    width:128px;
+    height:128px;
     margin:0 auto;
+    margin-top: -256px;
     position:relative;
-    border:8px solid #fff;
+    border:8px solid #4CF936;
     border-radius:50%;
     box-shadow:0 1px 8px rgba(34,34,34,0.3),inset 0 1px 8px rgba(34,34,34,0.3);
     background:url(../img/bg.png) 0 50%;
@@ -156,7 +150,7 @@ span .title {
     width:12px;
     height:12px;
     margin:-6px 0 0 -6px;
-    background:#fff;
+    background:#4CF936;
     border-radius:6px;
     content:"";
     display:block;
@@ -170,7 +164,7 @@ span .title {
     left:50%;
     margin:-4px 0 -4px -25%;
     padding:4px 0 4px 25%;
-    background:#fff;
+    background:#4CF936;
     -ms-transform-origin:100% 50%;
     transform-origin:100% 50%;
     border-radius:4px 0 0 4px;
@@ -183,7 +177,7 @@ span .title {
     left:50%;
     margin:-40% -3px 0;
     padding:40% 3px 0;
-    background:#fff;
+    background:#4CF936;
     -ms-transform-origin:50% 100%;
     transform-origin:50% 100%;
     border-radius:3px 3px 0 0
@@ -196,7 +190,7 @@ span .title {
     left:50%;
     margin:-40% -1px 0 0;
     padding:40% 1px 0;
-    background:#fff;
+    background:#4CF936;
     -ms-transform-origin:50% 100%;
     transform-origin:50% 100%
 }
@@ -216,26 +210,3 @@ footer {
     background-color: #E0E0E0;
     text-align: center;
 }
-
-/* main {
-    flex: 1 0 auto;
-  } */
-
-/* .search-content {
-    min-width: 50vw;
-    min-height: 50vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    background-image: url(../assets/bar-image.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: right;
-} */
-
-/* .search-content div {
-    width: 50vw;
-    margin: 30 px;
-    margin-bottom: 30px;
-} */
