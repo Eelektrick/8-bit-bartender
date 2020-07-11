@@ -216,7 +216,19 @@ footer {
     bottom: 0;
     box-sizing: border-box;
     width: 110%;
-    padding-bottom: 13px;
     background-color: #E0E0E0;
     text-align: center;
+}
+
+#container-logo.container {
+    text-align: center;
+    margin: 0px;
+}
+
+footer.page-footer.grey {
+    padding-top: 0px;
+}
+
+.footer-copyright.grey {
+    padding: 0px;
 }
