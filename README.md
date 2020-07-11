@@ -8,7 +8,7 @@ This is our project 8-bit-bartender.
 
 ## Link to the website
 
-My live deployment of weather-dashboard is located here: <https://eelektrick.github.io/8-bit-bartender/>
+Our live deployment of 8-Bit Bartender is located here: <https://eelektrick.github.io/8-bit-bartender/>
 
 ## How to use 8-bit-bartender
 
