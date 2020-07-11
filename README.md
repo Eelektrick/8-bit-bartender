@@ -2,13 +2,13 @@
 
 ![Screen shot of 8-bit-bartender](assets/bartenderIphoneX.PNG)
 
-![Screen shot of 8-bit-bartender with searched results.](assets/resultsBartender.PNG)
+![Screen shot of 8-bit-bartender with searched results.](assets/results.PNG)
 
 This is our project 8-bit-bartender.
 
 ## Link to the website
 
-My live deployment of weather-dashboard is located here: <https://eelektrick.github.io/8-bit-bartender/>
+Our live deployment of our project 8-bit-bartender is located here: <https://eelektrick.github.io/8-bit-bartender/>
 
 ## How to use 8-bit-bartender
 
