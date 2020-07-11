@@ -192,9 +192,22 @@ function mySave(searchbar) {
   }
 
   function myLoad() {
-    $("#fav-1").text(localStorage.getItem("0"))
-    $("#fav-2").text(localStorage.getItem("1"))
-    $("#fav-3").text(localStorage.getItem("2"))
+    if (localStorage.getItem("0") === null) {
+        $("#fav-1").text("");
+    } else {
+        $("#fav-1").text(localStorage.getItem("0"));
+    }
+    
+    if (localStorage.getItem("1") === null) {
+        $("#fav-2").text("");
+    } else {
+        $("#fav-2").text(localStorage.getItem("1"));
+    } 
 
+    if (localStorage.getItem("2") === null) {
+        $("#fav-3").text("");
+    } else {
+        $("#fav-3").text(localStorage.getItem("2"));
+    } 
   };
 });
