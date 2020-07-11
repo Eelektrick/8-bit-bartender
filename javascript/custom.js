@@ -108,7 +108,13 @@ $(document).ready(function(){
                     // Use ingredient as the input variable and loop it through the nutrition api
                     // Add the results to the nutrition section
 
-                    var settings = "https://api.nutritionix.com/v1_1/search/" + ingredient + "?results=0:20&fields=item_name,brand_name,item_id,nf_calories,nf_sodium,nf_total_fat,nf_total_carbohydrate,nf_sugars&appId=f15b331a&appKey=5dd831bff3255ac412edcba64b74b1c0";
+                    //appIDv1 = 'f15b331a';
+                    //appKEYv1 = '5dd831bff3255ac412edcba64b74b1c0';
+                    
+                    appIDv2 = 'bf048c13';
+                    appKEYv2 = 'c3dd66b967c78b48c0d8125ca47accc4';
+
+                    var settings = "https://api.nutritionix.com/v1_1/search/" + ingredient + "?results=0:20&fields=item_name,brand_name,item_id,nf_calories,nf_sodium,nf_total_fat,nf_total_carbohydrate,nf_sugars&appId=" + appIDv2 + "&appKey=" + appKEYv2;
 
                     $.ajax(settings).done(function (nutr_response) {
 
