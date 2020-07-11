@@ -1,5 +1,7 @@
 $(document).ready(function(){
 
+    myLoad();
+
     var initialCocktail = $("#fav-1").text();
     searchCocktail(initialCocktail);
 
@@ -48,7 +50,7 @@ $(document).ready(function(){
     //}); 
 
 
-// Update city if you click the search button
+// Search for cocktail if you click search button
 $("#find-cocktail").on("click", function(event) {
     event.preventDefault();
     var cocktail = $("#cocktail-input").val();
@@ -56,8 +58,13 @@ $("#find-cocktail").on("click", function(event) {
 });
 
 // Update city if you click a previous city
-$(".favBtn").on("click", "button", function() {
+$(".favBtn").on("click", function(event) {
+    event.preventDefault();
+    console.log("this is this: " + this)
     var cocktail = $(this).text();
+
+    console.log("this is this's text: " + cocktail)
+
     searchCocktail(cocktail);
 });
 
@@ -95,10 +102,10 @@ function searchCocktail(cocktail) {
 
         $("#nutritionCollapse").empty();
         $("#nutritionCollapse").append("<div><span>Calories: </span><span id='calories'></span></div>");
-        $("#nutritionCollapse").append("<div><span>Sodium: </span><span id='sodium'></span></div>");
-        $("#nutritionCollapse").append("<div><span>Fat: </span><span id='fat'></span></div>");
-        $("#nutritionCollapse").append("<div><span>Carbs: </span><span id='carbs'></span></div>");
-        $("#nutritionCollapse").append("<div><span>Sugar: </span><span id='sugar'></span></div>");
+        $("#nutritionCollapse").append("<div><span>Sodium: </span><span id='sodium'></span><span>mg</span></div>");
+        $("#nutritionCollapse").append("<div><span>Fat: </span><span id='fat'></span><span>g</span></div>");
+        $("#nutritionCollapse").append("<div><span>Carbs: </span><span id='carbs'></span><span>g</span></div>");
+        $("#nutritionCollapse").append("<div><span>Sugar: </span><span id='sugar'></span><span>g</span></div>");
         
         console.log(response);
         var ingredients = ["strIngredient1", "strIngredient2", "strIngredient3", "strIngredient4", "strIngredient5", "strIngredient6", "strIngredient7", "strIngredient8", "strIngredient9", "strIngredient10"];
@@ -117,6 +124,8 @@ function searchCocktail(cocktail) {
                 var settings = "https://api.nutritionix.com/v1_1/search/" + ingredient + "?results=0:20&fields=item_name,brand_name,item_id,nf_calories,nf_sodium,nf_total_fat,nf_total_carbohydrate,nf_sugars&appId=f15b331a&appKey=5dd831bff3255ac412edcba64b74b1c0";
 
                 $.ajax(settings).done(function (nutr_response) {
+
+                    console.log(nutr_response);
 
                     //adding up total calories of ingrediants
                     calories = parseFloat(nutr_response.hits[0].fields.nf_calories);
@@ -157,19 +166,19 @@ function searchCocktail(cocktail) {
     });
 };
 
-// Update city if you click the search icon
-//$("#searchBtn").on("click", function() {
-//});
-
 
 // save favorites
 $("#saveBtn").on("click", function() {
     searchbar = $("#cocktail-input").val();
     mySave(searchbar);
+
+    console.log("searchbar 1: " + searchbar);
 });
 
 //Save Funtion
 function mySave(searchbar) {
+
+    console.log("searchbar 2: " + searchbar);
 
     //moves save down after new one
 
@@ -179,7 +188,9 @@ function mySave(searchbar) {
     var move0 = localStorage.getItem("0");
     localStorage.setItem("1", move0);
     localStorage.setItem("0", searchbar)
+    myLoad();
   }
+
   function myLoad() {
     $("#fav-1").text(localStorage.getItem("0"))
     $("#fav-2").text(localStorage.getItem("1"))
