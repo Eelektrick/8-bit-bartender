@@ -26,7 +26,6 @@
 }
 
 #backgroundImage {
-    z-index: ;
     min-width: 350px;
     min-height: 225px;
     width: 100%;
@@ -40,6 +39,11 @@
 .nesBlue {
     margin-top: 50px;
     background-color: #000F6C;
+}
+
+
+.title {
+    float: right 50px;
 }
 
 .favBtn {
@@ -86,6 +90,10 @@
     border-color: white;
     width: 100%;
     height: 100%;
+}
+
+.saveBtn {
+    width: 100%;
 }
 
 #ing-group {
@@ -203,9 +211,11 @@ body {
     }
 
 footer {
-    /* position: sticky; */
+    position: sticky;
+    margin-top: auto;
     bottom: 0;
-    width: 100%;
+    box-sizing: border-box;
+    width: 110%;
     padding-bottom: 13px;
     background-color: #E0E0E0;
     text-align: center;
