@@ -26,14 +26,15 @@
 }
 
 #backgroundImage {
-    min-width: 350px;
-    min-height: 225px;
+    object-fit: fill;
+    width: 350px;
+    height: 400px;
     width: 100%;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 #searchContainer {
-    margin-top: 35px;
+    margin-top: 100px;
 }
 
 .nesBlue {
@@ -204,9 +205,10 @@
 }
 
 body {
-    display: flex;
+    /* display: flex; */
     min-height: 100vh;
-    flex-direction: column;
+    width: 100%;
+    /* flex-direction: column; */
     background-color: #6D2401;
     }
 
@@ -215,7 +217,7 @@ footer {
     margin-top: auto;
     bottom: 0;
     box-sizing: border-box;
-    width: 110%;
+    width: 100%;
     background-color: #E0E0E0;
     text-align: center;
 }
@@ -231,4 +233,5 @@ footer.page-footer.grey {
 
 .footer-copyright.grey {
     padding: 0px;
+    justify-content: center;
 }
